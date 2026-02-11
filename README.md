@@ -23,6 +23,8 @@ A Python visualization of the Lakota 13-moon calendar system with astronomical a
 pip install matplotlib numpy pandas
 from datetime import datetime, timedelta
 
+from datetime import datetime, timedelta
+
 # List of Sacred Moons
 lakota_moons = [
     {"lakota": "Wiótheȟika Wi", "english": "Moon of Hard Times"},
@@ -49,6 +51,14 @@ print("-" * 60)
 for i, moon in enumerate(lakota_moons):
     end_date = current_date + timedelta(days=29)
     print(f"{i+1:02} | {moon['lakota']:<25} | {current_date.strftime('%b %d')} to {end_date.strftime('%b %d')}")
+    # Fix: This line MUST be indented to work inside the loop
+    current_date = end_date + timedelta(days=1)
+print(f"{'#':<3} | {'Lakota Name':<25} | {'Dates (Approximate)'}")
+print("-" * 60)
+
+for i, moon in enumerate(lakota_moons):
+    end_date = current_date + timedelta(days=29)
+    print(f"{i+1:02} | {moon['lakota']:<25} | {current_date.strftime('%b %d')} to {end_date.strftime('%b %d')}")
 
 01 | Wiótheȟika Wi            | Jan 13 to Feb 11
 02 | Čhaŋnápopa Wi            | Feb 12 to Mar 13
@@ -58,3 +68,4 @@ for i, moon in enumerate(lakota_moons):
 
 
 # Your code here
+
