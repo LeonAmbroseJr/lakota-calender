@@ -40,8 +40,8 @@ lakota_moons = [
     {"lakota": "Waníyetu Wíčhokaŋ Wi", "english": "The 13th Moon"}
 ]
 
-# Starting point: The first full moon of 2025
-current_date = datetime(2025, 1, 13)
+# Starting point: The first full moon of 2026
+current_date = datetime(2026, 2, 10)
 
 print(f"{'#':<3} | {'Lakota Name':<25} | {'Dates (Approximate)'}")
 print("-" * 60)
@@ -54,5 +54,7 @@ for i, moon in enumerate(lakota_moons):
 02 | Čhaŋnápopa Wi            | Feb 12 to Mar 13
 03 | Ištáwičhayazan Wi        | Mar 14 to Apr 12
 ...
-    current_date = end_date + timedelta(days=1)
+                    current_date = end_date + timedelta(days=1)
 
+
+# Your code here
